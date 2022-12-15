@@ -16,6 +16,7 @@ export default function RecipeDetails() {
   const [ingredients, setIngredients] = useState([]);
   const [measures, setMeasures] = useState([]);
   const [isFavorite, setIsFavorite] = useState(false);
+  const [isInProgress, setIsInProgress] = useState('Start Recipe');
 
   useEffect(() => {
     const mealsUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
@@ -45,8 +46,17 @@ export default function RecipeDetails() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
-  const isInProgress = localStorage.inProgressRecipes
-    ? 'Continue Recipe' : 'Start Recipe';
+  useEffect(() => {
+    const isMeal2 = pathname.includes('meals') ? 'meals' : 'drinks';
+    const checkRecipesInProgress = JSON
+      .parse(localStorage.inProgressRecipes)[isMeal2]
+      ? JSON.parse(localStorage.inProgressRecipes)[isMeal2] : [];
+    const checkIds = Object.keys(checkRecipesInProgress);
+    if (checkIds.some((elem) => elem === id)) {
+      setIsInProgress('Continue Recipe');
+    }
+  }, [id]);
+
   const recipeUrl = window.location.href;
 
   const saveFavorite = (e) => {
