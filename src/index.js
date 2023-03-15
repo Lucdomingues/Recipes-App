@@ -7,7 +7,7 @@ import AppProvider from './context/Provider';
 ReactDOM
   .createRoot(document.getElementById('root'))
   .render(
-      <AppProvider>
-        <App />
-      </AppProvider>
+    <AppProvider>
+      <App />
+    </AppProvider>,
   );
