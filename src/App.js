@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, HashRouter } from 'react-router-dom';
 import Login from './components/Login';
 import Meals from './pages/meals';
 import Drinks from './pages/drinks';
@@ -14,7 +14,7 @@ import Favorite from './pages/FavoriteRecipes';
 function App() {
   return (
     <div>
-
+<HashRouter>
       <Switch>
         <Route exact path="/" component={ Login } />
         <Route exact path="/meals" component={ Meals } />
@@ -27,6 +27,7 @@ function App() {
         <Route exact path="/meals/:id/in-progress" component={ RecipeInProgress } />
         <Route exact path="/drinks/:id/in-progress" component={ RecipeInProgress } />
       </Switch>
+</HashRouter>
     </div>
   );
 }
