@@ -16,7 +16,7 @@
     "react-router-dom": "^5.3.3",
     "react-scripts": "^5.0.1"
   },
-  "homepage": ".",
+  "homepage": "http://lucdomingues.github.io/Recipes-App.github.io"
   "scripts": {
     "cy": "env CY_CLI=true cypress run",
     "cy:open": "cypress open --e2e --browser chrome",
