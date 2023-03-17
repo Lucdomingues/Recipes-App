@@ -70,15 +70,9 @@ Nesse projeto, a pessoa que estiver utilizando o app pode procurar uma receita e
 
 As telas sofrem variações dependendo do tipo da receita (se é comida ou bebida, no caso).
 
-- [x] Fazer login
-- [x] Pesquisar por uma banda ou artista
-- [x] Listar os álbuns disponíveis dessa banda ou artista
-- [x] Visualizar as músicas de um álbum selecionado
-- [x] Reproduzir uma prévia das músicas deste álbum
-- [x] Favoritar e desfavoritar músicas
-- [x] Ver a lista de músicas favoritas
-- [x] Ver o perfil da pessoa logada
-- [x] Editar o perfil da pessoa logada
+A base de dados são 2 APIs distintas, uma para comidas e outra para bebidas.
+
+O layout tem como foco dispositivos móveis, por conta disso todos os protótipos estão disponíveis em telas menores.
 
 
 <p align="right">(<a href="#readme-top">de volta para o topo</a>)</p>
