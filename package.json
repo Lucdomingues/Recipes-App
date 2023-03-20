@@ -1,7 +1,7 @@
 {
   "name": "recipes-app",
   "version": "1.0.0",
-  "homepage": "http://Lucdomingues.github.io/Test.github.io",
+  "homepage": "http://Lucdomingues.github.io/Recipes-App.github.io",
   "private": true,
   "engines": {
     "node": "16 || 18"
