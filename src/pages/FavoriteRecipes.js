@@ -71,10 +71,10 @@ export default function Favorite() {
           </button>
         </div>
         <section>
-          { getFavoriteRecipes.map((e, index) => (
-            <div key={ index + e.id }>
+          { getFavoriteRecipes.map((es, index) => (
+            <div key={ index + es.id }>
               <FavoriteRecipeCard
-                element={ e }
+                element={ es }
                 index={ index }
               />
             </div>
